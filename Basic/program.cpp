@@ -72,7 +72,8 @@ void Program::setParsedStatement(int lineNumber, Statement *stmt) {
 
 Statement *Program::getParsedStatement(int lineNumber) {
    lines *a=&head;
-   while(a->nxt->num<lineNumber)a=a->nxt;
+   while(a->nxt!= nullptr&&a->nxt->num<lineNumber)a=a->nxt;
+   if(a->nxt== nullptr||a->nxt->num>lineNumber)error("LINE NUMBER ERROR");
    return a->nxt->s;
 }
 
