@@ -28,7 +28,7 @@ void ifit::execute(EvalState &state) {
     else fl=0;
 }
 void inputit::execute(EvalState &state) {
-    cout<<"?";
+    cout<<" ? ";
     string a;
     while(1){
         getline(cin,a);int len=a.length();bool fl=0;
@@ -48,7 +48,7 @@ void inputit::execute(EvalState &state) {
             state.setValue(from->toString(),p);break;
         }
         cout<<"INPUT ERROR"<<endl;
-        cout<<"?";
+        cout<<" ? ";
     }
 }
 void printit::execute(EvalState &state) {
