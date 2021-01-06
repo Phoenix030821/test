@@ -127,7 +127,7 @@ void processLine(string line,Program &program,EvalState &state){
     else if(s=="INPUT"){
         Expression *exp=parseExp(scanner);
         if(exp->getType()!=IDENTIFIER)error("SYNTAX ERROR");
-        cout<<"?";
+        cout<<" ? ";
         string a;
         while(1){
             getline(cin,a);int len=a.length();bool fl=0;
@@ -147,7 +147,7 @@ void processLine(string line,Program &program,EvalState &state){
                 state.setValue(exp->toString(),p);break;
             }
             cout<<"INPUT ERROR"<<endl;
-            cout<<"?";
+            cout<<" ? ";
         }
     }
     else if(s=="PRINT"){
