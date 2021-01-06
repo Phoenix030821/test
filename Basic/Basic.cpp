@@ -159,7 +159,7 @@ void processLine(string line,Program &program,EvalState &state){
         while(i){
             program.getParsedStatement(i)->execute(state);
            if(program.getParsedStatement(i)->fl==0x3f3f3f3f){
-                program.clear();break;
+                break;
             }
             if(program.getParsedStatement(i)->fl)i=program.getParsedStatement(i)->fl;
             else i=program.getNextLineNumber(i);
