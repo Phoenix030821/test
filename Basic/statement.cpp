@@ -62,5 +62,5 @@ void remit::execute(EvalState &state) {
     return;
 }
 void endit::execute(EvalState &state) {
-    return;
+   fl=0x3f3f3f3f; return;
 }
