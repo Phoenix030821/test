@@ -52,7 +52,6 @@ void inputit::execute(EvalState &state) {
     }
 }
 void printit::execute(EvalState &state) {
-    if(!state.isDefined(from->toString()))error("VARIABLE NOT DEFINED");
     cout<<state.getValue(from->toString());
 }
 void gotoit::execute(EvalState &state) {
