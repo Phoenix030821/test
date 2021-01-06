@@ -47,7 +47,7 @@ void inputit::execute(EvalState &state) {
             }
             state.setValue(from->toString(),p);break;
         }
-        cout<<"INPUT ERROR"<<endl;
+        cout<<"INVALID NUMBER"<<endl;
         cout<<" ? ";
     }
 }
