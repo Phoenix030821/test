@@ -65,6 +65,7 @@ int ConstantExp::getValue() {
 
 IdentifierExp::IdentifierExp(string name) {
    this->name = name;
+   if(name=="LET"||name=="IF"||name=="THEN"||name=="PRINT"||name=="INPUT"||name=="REM"||name=="END"||name=="GOTO")error("SYNTAX ERROR");
 }
 
 int IdentifierExp::eval(EvalState & state) {
@@ -144,7 +145,7 @@ int CompoundExp::eval(EvalState & state) {
    if (op == "-") return left - right;
    if (op == "*") return left * right;
    if (op == "/") {
-       if(right==0)error("DIVISION BY ZERO");
+       if(right==0)error("DIVIDE BY ZERO");
        return left / right;
    }
    error("Illegal operator in expression");
