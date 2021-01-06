@@ -52,7 +52,7 @@ void inputit::execute(EvalState &state) {
     }
 }
 void printit::execute(EvalState &state) {
-    cout<<state.getValue(from->toString());
+    cout<<from->eval(state);
 }
 void gotoit::execute(EvalState &state) {
     fl=li;
