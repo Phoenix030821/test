@@ -146,7 +146,7 @@ void processLine(string line,Program &program,EvalState &state){
                 }
                 state.setValue(exp->toString(),p);break;
             }
-            cout<<"INPUT ERROR"<<endl;
+            cout<<"INVALID NUMBER"<<endl;
             cout<<" ? ";
         }
     }
