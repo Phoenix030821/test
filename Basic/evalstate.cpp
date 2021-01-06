@@ -27,6 +27,7 @@ void EvalState::setValue(string var, int value) {
 }
 
 int EvalState::getValue(string var) {
+   if(!symbolTable.containsKey(var))error("VARIABLE NOT DEFINED");
    return symbolTable.get(var);
 }
 
